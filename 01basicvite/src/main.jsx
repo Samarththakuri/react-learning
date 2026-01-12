@@ -1,10 +1,17 @@
-import { StrictMode } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
 
-import App from "./App.jsx";
-
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+function MyApp() {
+  return (
+    <div>
+      <h1>Custom react app</h1>
+    </div>
+  );
+}
+const areactElement = React.createElement(
+  "a",
+  { href: "https://google", target: "_blank" },
+  "click to visit google"
 );
+const root = createRoot(document.getElementById("root"));
+root.render(areactElement);
